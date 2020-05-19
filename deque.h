@@ -13,6 +13,9 @@
 
 typedef struct _deque Deque;
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 /* create and close functions */
 // ==========================================================
 
@@ -96,6 +99,8 @@ void deque_foreach(Deque *deque, void (*callback)(void *));
 void* deque_to_array(Deque *deque);
 
 // ==========================================================
-
+#ifdef __cplusplus
+}
+#endif
 
 #endif // _DEQUE_H_
