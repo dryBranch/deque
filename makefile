@@ -6,7 +6,7 @@ objs = $(item:%=%.o)
 test : $(objs)
 	gcc $(objs) -o test -Wall && ./$@
 
-target : deque.c deque.h
+lib : deque.c deque.h
 	gcc deque.c -c -o deque.o
 	ar rcs $(prj) deque.o
 

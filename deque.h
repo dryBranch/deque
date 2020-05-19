@@ -91,6 +91,11 @@ int deque_index_of(Deque *deque, void *value);
 
 /* using callback() to manipulate every elements in the deque */
 void deque_foreach(Deque *deque, void (*callback)(void *));
+
+/* copy the address in deque to array */
+void* deque_to_array(Deque *deque);
+
 // ==========================================================
+
 
 #endif // _DEQUE_H_

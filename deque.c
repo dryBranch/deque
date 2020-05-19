@@ -243,3 +243,15 @@ void deque_foreach(Deque *deque, void (*callback)(void *)){
         callback(cur->value);
     }
 }
+
+void* deque_to_array(Deque *deque){
+    if(deque == NULL || deque->size == 0) return NULL;
+    void **array = malloc(sizeof(void *) * deque->size);
+    deque_element *cur = deque->head;
+    for(int i = 0; i < deque->size; i++){
+        array[i] = cur->value;
+        cur = cur->next;
+    }
+    return array;
+}
+
